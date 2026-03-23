@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="shortcut icon" href="icons8-loading-50.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div class="blob"></div>
+<div class="scanlines"></div>
+<div class="corner tl"></div>
+<div class="corner tr"></div>
+<div class="corner bl"></div>
+<div class="corner br"></div>
+ 
+<nav>
+  
+  <div class="nav-badge"><span></span>Live</div>
+</nav>
+ 
+<main class="page">
+ 
+  <!-- LEFT -->
+  <div class="left">
+    <p class="eyebrow">Fullstack Developer · Mumbai</p>
+ 
+    <h1>Building<br><em>Something</em>Bold.</h1>
+ 
+    <p class="tagline">
+    
+    </p>
+ 
+    <div class="waitlist-form">
+      <input type="email" id="emailInput" placeholder="name@example.com" />
+      <button onclick="handleJoin()">Notify Me</button>
+    </div>
+    <p class="success-msg" id="successMsg"></p>
+    <p class="error-msg" id="errorMsg"></p>
+ 
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value" id="counter">0</div>
+        <div class="stat-label">On Waitlist</div>
+      </div>
+      <div class="vdivider"></div>
+      <div class="stat">
+        <div class="stat-value accent">Live</div>
+        <div class="stat-label">Status</div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- RIGHT — Live Email Panel -->
+  <div class="right">
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">⬤ &nbsp;Live Waitlist</span>
+        <span class="panel-count" id="panelCount">0 subscribers</span>
+      </div>
+      <div class="panel-actions">
+        <button class="btn-export" onclick="exportCSV()">↓ Export CSV</button>
+        <button class="btn-clear" onclick="clearAll()">✕ Clear All</button>
+      </div>
+      <div class="email-list" id="emailList">
+        <div class="empty-state">
+          <span class="icon">📭</span>
+          No emails yet.<br>Be the first to join!
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</main>
+ 
+<div class="ticker">
+  <div class="ticker-inner" id="ticker"></div>
+</div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
